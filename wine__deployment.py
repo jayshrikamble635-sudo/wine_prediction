@@ -48,6 +48,6 @@ input_data = pd.DataFrame([[
     'sulphates',
     'alcohol'
 ])
-if st.button("Predict"):
+if st.button("Predict Quality"):
     prediction = model.predict(input_data)
-    st.success(f"Predicted Wine Quality: {prediction[0]}"))
+    st.success(f"Predicted Wine Quality: {prediction[0]}")
