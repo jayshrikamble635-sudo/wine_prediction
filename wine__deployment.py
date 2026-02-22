@@ -35,19 +35,8 @@ input_data = pd.DataFrame([[
     pH,
     sulphates,
     alcohol
-]], columns=[
-    'fixed acidity',
-    'volatile acidity',
-    'citric acid',
-    'residual sugar',
-    'chlorides',
-    'free sulfur dioxide',
-    'total sulfur dioxide',
-    'density',
-    'pH',
-    'sulphates',
-    'alcohol'
-])
+]], columns=model.feature_names_in_)
 if st.button("Predict Quality"):
+    input_data.columns = model.feature_names_in_
     prediction = model.predict(input_data)
     st.success(f"Predicted Wine Quality: {prediction[0]}")
