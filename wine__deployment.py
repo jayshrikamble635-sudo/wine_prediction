@@ -9,7 +9,7 @@ Original file is located at
 
 import streamlit as st
 import joblib
-model=joblib.load("dt_modle.pkl")
+model=joblib.load("dtc_model.pkl")
 st.title("wine type prediction !")
 fixed_acidity=st.number_input("fixed_acidity")
 volatile_acidity=st.number_input("volatile_acidity")
