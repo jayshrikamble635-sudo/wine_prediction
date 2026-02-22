@@ -34,14 +34,9 @@ input_data = pd.DataFrame([[
     density,
     pH,
     sulphates,
-    alcohol,
-    quality
+    alcohol
 ]], columns=model.feature_names_in_)
 
-if st.button("predict"):
-    prediction=model.predict(input_data)
-
-    if prediction=="white":
-        st.success("white wine")
-    else:
-        st.error("red wine")
+if st.button("Predict"):
+    prediction = model.predict(input_data)
+    st.success(f"Predicted Wine Quality: {prediction[0]}")
